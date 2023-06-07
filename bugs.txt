@@ -1,3 +1,4 @@
+BUGS REPORT
 1.
 
 On importing the .pfx certificate through USB and SMB it prompts error mesage "Please provide host in URL" and also fails to import with all protocols.
