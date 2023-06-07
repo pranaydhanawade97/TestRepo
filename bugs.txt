@@ -1,0 +1,184 @@
+1.
+
+On importing the .pfx certificate through USB and SMB it prompts error mesage "Please provide host in URL" and also fails to import with all protocols.
+
+Actual result:on importing .pfx extension certificate with USB or SMB fails to import certificate and show error message "Please Provide host in URL" and also fails to import with all protocol.
+
+
+1.Go to certificate manager
+2.click on import button.
+3.select radio button of select file and select .pxf extension certificate e.g.WebIAStest.pfx from USB or SMB
+4.click on import.
+5.enter Import password and PEM Pass Phase Password and click on ok.
+6.It show "Please provide host in url" error message.
+
+OR
+1.Go to certificate manager
+2.click on import button
+3.Enter the proper URL(http://administrator:pass_123@192.168.0.95/certificates/WebIAStest.pfx)
+4.click on import button
+
+NOTE:different error message are displaying with different protocol while importing .pfx certificate.
+
+2.
+
+In Import/Export domain user not work with FTP protocol
+
+Actual Result:with Ftp protocol setting fails to import/Export with domain user
+
+
+1.Go to Tools.
+2.In tools,go to System Tools.
+3.click on import/Export settings. 
+4.select method as Ftp.
+5.enter server ip(i.e 192.168.0.95),filename,domain-username/password(i.e.vdi\user1/admin12345 or administartor@vdi.com/Verixo#123)
+setting fail to import/export show show "curl(67) Access denied:530" error message.
+
+3.
+
+on Configuration wizard if done some manual settings and then select automatically mode ,then image get up with manual settings
+On configuration wizard In manual mode if we do some settigns and then if we select automatically mode then image fails to get up with default value, image gets up with manual settign those were set on configuraion wizard.
+
+Actual Result:After restore on configuration wizard In manual mode if we do some settigns and then if we select automatically mode then image fails to get up with default value, image gets up with manual settign those were set on configuraion wizard.
+
+
+1.Restore Thin client.
+2.on configuration wizard select manual.
+3.Apply some settings(e.g change keyboard layout to french,Mode as desktop and etc) and click on finish.
+4.go back and in configure setting  select automatically.
+image gets up with manual settign those were set on configuraion wizard.
+
+4.
+
+
+Virtual keyboard gets hangs when we use shortcut key to SwitchKeyboardLayout (i.e. Alt+S ) from virtual keyboard 
+
+Actual Result:on performing SwitchKeyboardLayout (i.e. Alt+S ) from virtual keyboard,virtual keyboard gets hang.
+
+
+1.Invoke Keyboard and Mouse module.
+2.Click on Advance button.
+3.Add additional layout(e.g french,german)
+4.In Advanced Options,Check "Show Virtual Keyboard" checkbox and click on apply.
+5.Now perform switchKeyboardLayout(i.e Alt+S) through virtual keyboard.
+Virtual Keyboard gets hang.
+
+
+Note : In case of virtual keyboard hangs then we need to uncheck Show virtual keyboard checkbox and click on apply in keyboard layout module )
+
+5.
+
+
+Right-Alt to behave as Left-Alt works even when "Right-Alt to behave as Left-Alt" checkbox is Uncheck in keyboard layout module
+
+Actual Result:If Default keyboard Layout is set as English(US) and Default Keyboard Variant as None then Right-Alt to behave as Left-Alt works even when "Right-Alt to behave as Left-Alt" checkbox is Uncheck in keyboard layout module
+.
+1.Invoke Keyboard and Mouse module.
+2.set Default keyboard Layout is set as "English(US)" and Default Keyboard Variant as "None".
+3.perform any shorcut containing Alt(i.e Alt+cltrl+S or Alt_cltrl+left Arrow key) through Right Alt.
+action get perform through Right Alt also even though "Right -Alt to behave as Left -Alt is uncheck.
+
+
+6.
+
+In VMView with all Protocol when we launch the connection in specified resolution and then Sign out the session,Horizon client window display in Set Resolution.
+
+Actual result:After signing out VMView session with all protocols,Horizon client window display in Set Resolution.
+
+Steps:
+1) Create VMRDP/PcoIP/Blast connection
+2) Enter valid credentials ( server-vmwareserver79.vdi.com/ username:user1/ password-user1_1234/ domain-vdi.com)
+3) go to the display tab and select lower resolution.
+4) now save and launch the connection.
+5) Once VD list display launch VD (it will launch in specified resolution )
+6) Once VD get launch then sign out the session .
+horizon client window display in that resolution.
+
+
+7.
+In VMView RDP, Options in View Tab display disable when we launch connection in any resolution
+
+
+Actual Result:
+when launch VMView connection through RDP protocol,options in view tab display disable for any specified resolution.
+
+1) Create VMRDP COnnection 
+2) Enter valid credentials ( server-vmwareserver79.vdi.com/ username:user1/ password-user1_1234/ domain-vdi.com)
+3) go to the display tab and select lower resolution.
+4) now save and launch the connection.
+5) Once VD list display launch VD.
+6) Now check the View Options in Menubar.
+
+
+8.
+
+
+Image gets stuck when we type invalid IP(eg: 123456)  in XFS server field in Font module.
+
+Actual Result: when enter invalid ip in XFS server field and click on apply image gets stuck.
+
+1.Invoke Fonts module.
+2.Click on + button to Add font.
+3.Goto Font Server. ( XFS is selected bydefault)
+4.Type invalid IP (eg: 123456) in Server text-field.
+5.Click on apply button.
+6.Move font module , control center or click mouse anywhere on hotplug.
+
+(Image gets stuck till error message comes because it takes more than 30 seconds to appear error message for invalid IP. We need to perform hardboot)
+
+9.
+
+
+on importing certificates throug url with wrong credentials display different error message for different protocol.
+
+Different Error message display for different protocols. (i.e When we import certificate with HTTP protocol by giving invalid credentials then it display 
+"Please Enter Proper URL" and same with FTP protocol it display "access denied due to wrong Credentials")
+
+1) Invoke Certificate Manager and click on import
+2) Enter URL ex. http://vdi.com\user1:user1_1233423@192.168.2.126/certificates/myca.crt ( enter wrong Credentials)
+3) import Certificates with Different protocol ex. http/ ftp. with same URL.
+
+10.
+
+
+In chrome browser on importing certificate through browser which is already imported show error message "Certification Authority Import Error"
+
+Actual Result: If myca.crt certificate is already present in Certificate manager and if we import same certificate throw browser than it show "Certification Authority Import Error" error message
+
+
+1.Go to certificate manager ,and import certificate(e.g myca.crt)
+2.Launch chrome connection
+3.Go go setting of chrome connection
+4.Go to Manage certificate
+5.click on import,and try to import certificate(same certificate)
+6.Certificate not import and it through error message
+
+11.
+
+"On exporting system settings/snapshot settings on FTP/FTPS after second time without closing the Export window,it prompts error message "curl:(25) Failed FTP upload:550"but the tar gets exported on server. 
+
+Actual Result: "On exporting system settings/snapshot settings on FTP server without closing exportsetting/usersnapshot window if changed protocol to FTPS and export same setting(without changing name) ,it prompts error message "curl:(25) Failed FTP upload:550"but the tar gets exported on server. 
+
+
+1.Export any system settings /snapshot settings on FTP server. 
+2.Again export the same tar on FTPS server which have been exported on FTP without closing the window.
+ 
+
+Os Shortcut Keys are not working in Store browse and self service Connection
+
+When we perform OS shortcut keys in Store Browse connection then it fails to work.
+
+1.Create Store Browse Connection.
+Server-xd718server.vdi.com,Username-user1,Pass-use1@1234
+2.Connect Created connection.
+3.in session perform shortcut keys
+
+
+
+
+
+
+
+
+
+
